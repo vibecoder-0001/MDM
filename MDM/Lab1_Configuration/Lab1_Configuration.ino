@@ -1,9 +1,13 @@
+
 void setup() {
-  Serial.begin(9600);
-  while (!Serial);
-  Serial.println("================================");
-  Serial.println("Arduino Nano 33 BLE Sense Ready");
-  Serial.println("Configuration Successful!");
-  Serial.println("================================");
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
 }
-void loop() {}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);  // change state of the LED by setting the pin to the HIGH voltage level
+  delay(1000);                      // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);   // change state of the LED by setting the pin to the LOW voltage level
+  delay(1000);                      // wait for a second
+}
